@@ -102,7 +102,46 @@
                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker #picker></mat-datepicker>
                 </mat-form-field>
-
+            </div>
+            <div class="mb-5">
+                <h5>Stepper</h5>
+                <hr />
+                <button class="btn mb-3 {{!isLinear ? 'btn-success': 'btn-warning'}}" (click)="isLinear = !isLinear" id="toggle-linear">
+                    {{!isLinear ? 'Enable Validation' : 'Disable Validation'}}
+                </button>
+                <mat-horizontal-stepper [linear]="isLinear" #stepper>
+                    <mat-step [stepControl]="firstFormGroup">
+                        <form [formGroup]="firstFormGroup">
+                            <ng-template matStepLabel>Fill out your name</ng-template>
+                            <mat-form-field>
+                                <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+                            </mat-form-field>
+                            <div>
+                                <button class="btn btn-info" matStepperNext>Next</button>
+                            </div>
+                        </form>
+                    </mat-step>
+                    <mat-step [stepControl]="secondFormGroup">
+                        <form [formGroup]="secondFormGroup">
+                            <ng-template matStepLabel>Fill out your address</ng-template>
+                            <mat-form-field>
+                                <input matInput placeholder="Address" formControlName="secondCtrl" required>
+                            </mat-form-field>
+                            <div>
+                                <button class="btn btn-warning" matStepperPrevious>Back</button>
+                                <button class="btn btn-info" matStepperNext>Next</button>
+                            </div>
+                        </form>
+                    </mat-step>
+                    <mat-step>
+                        <ng-template matStepLabel>Done</ng-template>
+                        <p>You are now done.</p>
+                        <div>
+                            <button class="btn btn-warning" matStepperPrevious>Back</button>
+                            <button class="btn btn-info" (click)="stepper.reset()">Reset</button>
+                        </div>
+                    </mat-step>
+                </mat-horizontal-stepper>
             </div>
         </div>
         <div class="col-md-6">
@@ -157,14 +196,12 @@
                 <h5>Input type Search</h5>
                 <hr />
                 <div class="cntr">
-                    <div class="md-checkbox">
-                        <input id="i6" type="checkbox" checked>
-                        <label for="i6">Item 1</label>
-                    </div>
-                    <div class="md-checkbox">
-                        <input id="i7" type="checkbox">
-                        <label for="i7">Item 2</label>
-                    </div>
+                    <form novalidate>
+                        <mat-form-field>
+                            <input matInput placeholder="Search" />
+                            <button type="submit" class="icon-search">search</button>
+                        </mat-form-field>
+                    </form>
                 </div>
             </div>
             <div class="mb-5">

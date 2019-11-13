@@ -15,6 +15,7 @@ $colorInfo: #007bff;
     border: none;
     color: #fff;
     text-transform: uppercase;
+    margin: 0 10px;
 
 }
 .btn:hover {
@@ -24,15 +25,12 @@ $colorInfo: #007bff;
 .btn-success {
     background-color: $colorSuccess;
 }
-
 .btn-error {
     background-color: $colorError;
 }
-
 .btn-warning {
     background-color: $colorWarning;
 }
-
 .btn-info {
     background-color: $colorInfo;
 }
@@ -364,4 +362,20 @@ select {
     cursor: pointer;
     background-image: none;
     border-radius: 4px;
+}
+mat-form-field {
+    width: 100%;
+}
+.icon-search {
+    position: absolute;
+    right: 0;
+    top: 2px;
+    width: 20px;
+    height: 20px;
+    text-indent: -9999px;
+    overflow: hidden;
+    border: none;
+    display: inline-block;
+    background: url("../../assets/images/search-icon.png") no-repeat;
+    background-size: 100%;
 }

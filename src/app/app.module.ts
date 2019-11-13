@@ -8,6 +8,9 @@ import {MatFormFieldModule, MatFormFieldControl} from "@angular/material/form-fi
 import {MatInputModule} from "@angular/material/input";
 import {MAT_DATE_LOCALE} from "@angular/material/core";
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatStepperModule} from "@angular/material/stepper";
+import {ReactiveFormsModule} from "@angular/forms";
+
 //components
 import {AppComponent} from './app.component';
 import {HomeComponent} from './components/home/home.component';
@@ -36,7 +39,9 @@ import {Tab} from './directives/tab';
         MatDatepickerModule,
         MatFormFieldModule,
         MatInputModule,
-        MatTabsModule
+        MatTabsModule,
+        MatStepperModule,
+        ReactiveFormsModule,
     ],
     providers: [
         // {provide: MAT_DATE_LOCALE, useValue: 'ar-SA'},
