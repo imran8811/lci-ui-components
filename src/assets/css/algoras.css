@@ -1,0 +1,381 @@
+/* line 2, ../../../sass/algoras.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 6, ../../../sass/algoras.scss */
+.hidden {
+  display: none;
+}
+
+/* line 12, ../../../sass/algoras.scss */
+.btn {
+  padding: 9px 40px;
+  border-radius: 30px;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* line 20, ../../../sass/algoras.scss */
+.btn:hover {
+  -webkit-box-shadow: 0 2px 10px 2px #ccc;
+  box-shadow: 0 2px 10px 2px #ccc;
+}
+
+/* line 24, ../../../sass/algoras.scss */
+.btn-success {
+  background-color: #1aa79c;
+}
+
+/* line 28, ../../../sass/algoras.scss */
+.btn-error {
+  background-color: #dc3545;
+}
+
+/* line 32, ../../../sass/algoras.scss */
+.btn-warning {
+  background-color: #ea724b;
+}
+
+/* line 36, ../../../sass/algoras.scss */
+.btn-info {
+  background-color: #007bff;
+}
+
+/* line 39, ../../../sass/algoras.scss */
+textarea {
+  resize: none;
+  background: #fff;
+  padding: 10px 0 0;
+  border-radius: 5px;
+  min-height: 100px;
+}
+
+/* line 47, ../../../sass/algoras.scss */
+.inp {
+  position: relative;
+  margin: auto;
+  width: 100%;
+}
+/* line 52, ../../../sass/algoras.scss */
+.inp .label {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  font-size: 16px;
+  color: #9098A9;
+  font-weight: 500;
+  transform-origin: 0 0;
+  transition: all .2s ease;
+}
+/* line 63, ../../../sass/algoras.scss */
+.inp .border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: #0077FF;
+  transform: scaleX(0);
+  transform-origin: 0 0;
+  transition: all .15s ease;
+}
+/* line 75, ../../../sass/algoras.scss */
+.inp input {
+  -webkit-appearance: none;
+  width: 100%;
+  border: 0;
+  font-family: inherit;
+  padding: 12px 0;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 2px solid #C8CCD4;
+  background: none;
+  border-radius: 0;
+  color: #223254;
+  transition: all .15s ease;
+}
+/* line 90, ../../../sass/algoras.scss */
+.inp input:hover {
+  background: rgba(34, 50, 84, 0.03);
+}
+/* line 95, ../../../sass/algoras.scss */
+.inp input:not(:placeholder-shown) + span {
+  color: #5A667F;
+  transform: translateY(-26px) scale(0.75);
+}
+/* line 101, ../../../sass/algoras.scss */
+.inp input:focus {
+  background: none;
+  outline: none;
+}
+/* line 105, ../../../sass/algoras.scss */
+.inp input:focus + span {
+  color: #0077FF;
+  transform: translateY(-26px) scale(0.75);
+}
+/* line 109, ../../../sass/algoras.scss */
+.inp input:focus + span + .border {
+  transform: scaleX(1);
+}
+
+/* line 117, ../../../sass/algoras.scss */
+.inp-textarea {
+  position: relative;
+  margin: auto;
+  width: 100%;
+}
+/* line 121, ../../../sass/algoras.scss */
+.inp-textarea .label {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  font-size: 16px;
+  color: #9098A9;
+  font-weight: 500;
+  transform-origin: 0 0;
+  transition: all .2s ease;
+}
+/* line 132, ../../../sass/algoras.scss */
+.inp-textarea .border {
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: #0077FF;
+  transform: scaleX(0);
+  transform-origin: 0 0;
+  transition: all .15s ease;
+}
+/* line 144, ../../../sass/algoras.scss */
+.inp-textarea textarea {
+  -webkit-appearance: none;
+  width: 100%;
+  border: 0;
+  font-family: inherit;
+  padding: 12px 0;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 2px solid #C8CCD4;
+  background: none;
+  border-radius: 0;
+  color: #223254;
+  transition: all .15s ease;
+}
+/* line 159, ../../../sass/algoras.scss */
+.inp-textarea textarea:hover {
+  background: rgba(34, 50, 84, 0.03);
+}
+/* line 164, ../../../sass/algoras.scss */
+.inp-textarea textarea:not(:placeholder-shown) + span {
+  color: #5A667F;
+  transform: translateY(-26px) scale(0.75);
+}
+/* line 170, ../../../sass/algoras.scss */
+.inp-textarea textarea:focus {
+  background: none;
+  outline: none;
+}
+/* line 174, ../../../sass/algoras.scss */
+.inp-textarea textarea:focus + span {
+  color: #0077FF;
+  transform: translateY(-26px) scale(0.75);
+}
+/* line 178, ../../../sass/algoras.scss */
+.inp-textarea textarea:focus + span + .border {
+  transform: scaleX(1);
+}
+
+/* line 189, ../../../sass/algoras.scss */
+.radio {
+  position: relative;
+  cursor: pointer;
+  line-height: 20px;
+  font-size: 14px;
+  margin: 15px;
+}
+/* line 195, ../../../sass/algoras.scss */
+.radio .label {
+  position: relative;
+  display: block;
+  float: left;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #C8CCD4;
+  border-radius: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+/* line 205, ../../../sass/algoras.scss */
+.radio .label:after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: #225CFF;
+  transform: scale(0);
+  transition: all .2s ease;
+  opacity: .08;
+  pointer-events: none;
+}
+/* line 221, ../../../sass/algoras.scss */
+.radio:hover .label:after {
+  transform: scale(3.6);
+}
+
+/* line 226, ../../../sass/algoras.scss */
+input[type="radio"]:checked + .label {
+  border-color: #225CFF;
+}
+/* line 228, ../../../sass/algoras.scss */
+input[type="radio"]:checked + .label:after {
+  transform: scale(1);
+  transition: all 0.2s cubic-bezier(0.35, 0.9, 0.4, 0.9);
+  opacity: 1;
+}
+
+/* line 247, ../../../sass/algoras.scss */
+.md-checkbox {
+  position: relative;
+  margin: 1em 0;
+  text-align: left;
+}
+/* line 251, ../../../sass/algoras.scss */
+.md-checkbox.md-checkbox-inline {
+  display: inline-block;
+}
+/* line 254, ../../../sass/algoras.scss */
+.md-checkbox label {
+  cursor: pointer;
+  display: inline;
+  line-height: 1.25em;
+  vertical-align: top;
+  clear: both;
+  padding-left: 1px;
+}
+/* line 261, ../../../sass/algoras.scss */
+.md-checkbox label:not(:empty) {
+  padding-left: 0.75em;
+}
+/* line 264, ../../../sass/algoras.scss */
+.md-checkbox label:before, .md-checkbox label:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+/* line 270, ../../../sass/algoras.scss */
+.md-checkbox label:before {
+  width: 1.25em;
+  height: 1.25em;
+  background: #fff;
+  border: 2px solid rgba(0, 0, 0, 0.54);
+  border-radius: 0.125em;
+  cursor: pointer;
+  transition: background .3s;
+}
+/* line 284, ../../../sass/algoras.scss */
+.md-checkbox input[type="checkbox"] {
+  outline: 0;
+  visibility: hidden;
+  width: 1.25em;
+  margin: 0;
+  display: block;
+  float: left;
+  font-size: inherit;
+}
+/* line 293, ../../../sass/algoras.scss */
+.md-checkbox input[type="checkbox"]:checked + label:before {
+  background: #225CFF;
+  border: none;
+}
+/* line 297, ../../../sass/algoras.scss */
+.md-checkbox input[type="checkbox"]:checked + label:after {
+  transform: translate(0.25em, 0.33654em) rotate(-45deg);
+  width: 0.75em;
+  height: 0.375em;
+  border: 0.125em solid #fff;
+  border-top-style: none;
+  border-right-style: none;
+}
+/* line 308, ../../../sass/algoras.scss */
+.md-checkbox input[type="checkbox"]:disabled + label:before {
+  border-color: rgba(0, 0, 0, 0.26);
+}
+/* line 312, ../../../sass/algoras.scss */
+.md-checkbox input[type="checkbox"]:disabled:checked + label:before {
+  background: rgba(0, 0, 0, 0.26);
+}
+
+/* line 320, ../../../sass/algoras.scss */
+.lci-tabs {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+/* line 324, ../../../sass/algoras.scss */
+.lci-tabs ul {
+  overflow: hidden;
+}
+
+/* line 327, ../../../sass/algoras.scss */
+.lci-tabs ul li {
+  float: left;
+  list-style: none;
+  background: #ccc;
+  border: 1px solid #ccc;
+  border-radius: 5px 5px 0 0;
+  margin-right: 5px;
+}
+
+/* line 335, ../../../sass/algoras.scss */
+.lci-tabs ul li.active {
+  background: #007bff;
+}
+
+/* line 338, ../../../sass/algoras.scss */
+.lci-tabs ul li:hover a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* line 342, ../../../sass/algoras.scss */
+.lci-tabs ul li:hover {
+  background: #007bff;
+}
+
+/* line 345, ../../../sass/algoras.scss */
+.lci-tabs ul li.active a {
+  color: #fff;
+}
+
+/* line 348, ../../../sass/algoras.scss */
+.lci-tabs ul li a {
+  display: block;
+  color: #000;
+  padding: 5px 20px;
+}
+
+/* line 354, ../../../sass/algoras.scss */
+select {
+  display: inline-block;
+  border: 1px solid #adadad;
+  width: 100%;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-weight: 400;
+  line-height: 1.52857143;
+  text-align: left;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border-radius: 4px;
+}
