@@ -18,3 +18,8 @@ pre {
   padding: 0;
   text-align: left;
 }
+
+/* line 16, ../../../sass/style.scss */
+.heading-wrap {
+  background: #c3b9aa;
+}

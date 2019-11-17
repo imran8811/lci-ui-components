@@ -19,11 +19,15 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 //components
 import {AppComponent} from './app.component';
 import {HomeComponent} from './components/home/home.component';
+import {DashboardComponent} from './components/dashboard/dashboard.component';
+import {CreateUserComponent} from "./components/dashboard/user-managment/create-user.component";
 
 @NgModule({
     declarations: [
         AppComponent,
         HomeComponent,
+        CreateUserComponent,
+        DashboardComponent,
     ],
     imports: [
         BrowserModule,

@@ -1,0 +1,193 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2 bg-sidebar p-0 align-self-stretch">
+            <div class="logo mt-3 pl-3 pr-3">
+                <a routerLink="/dashboard"><img src="../../assets/images/logo.png"></a>
+            </div>
+            <div class="search-bar pl-3 pr-3 mt-3">
+                <div class="cntr">
+                    <form novalidate>
+                        <mat-form-field class="color-white">
+                            <input matInput placeholder="Search" />
+                            <button type="submit" class="icon-search">sch</button>
+                        </mat-form-field>
+                    </form>
+                </div>
+            </div>
+            <ul class="sidebar-menu">
+                <li>
+                    <i class="pro-icon">icon</i>
+                    <a [routerLink]="CompanyManagment"><i class="fa fa-search"></i>Company Managment</a>
+                </li>
+                <li>
+                    <i class="pro-icon">icon</i>
+                    <a [routerLink]="RoleManagment">Role Managment</a>
+                </li>
+                <li>
+                    <i class="pro-icon">icon</i>
+                    <a [routerLink]="RoleGroupManagment">Role Group Managment</a>
+                </li>
+                <li>
+                    <i class="pro-icon">icon</i>
+                    <a [routerLink]="UserGroupManagment">User Group Managment</a>
+                </li>
+                <li class="active">
+                    <i class="pro-icon">icon</i>
+                    <a [routerLink]="UserGroupManagment">User Group Managment</a>
+                </li>
+                <li>
+                    <i class="pro-icon">icon</i>
+                    <a [routerLink]="WhiteListIPs">Whitelist IPs</a>
+                </li>
+                <li>
+                    <i class="pro-icon">icon</i>
+                    <a [routerLink]="AuthSettings">Manage Authorization Settings</a>
+                </li>
+                <li>
+                    <i class="pro-icon">icon</i>
+                    <a [routerLink]="RestrictIPs">Restrict IPs</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-10 p-0">
+            <div class="heading-wrap text-center pt-2 pb-2">
+                <h1>BAAN For Technology Int</h1>
+            </div>
+            <div class="nav-area bg-sidebar text-center color-white pt-3 pb-3">
+                <p>Nav Area</p>
+            </div>
+            <div class="content-area pt-3 pl-4 pr-4">
+                <h2 class="text-uppercase">add new user</h2>
+                <hr />
+                <form>
+                    <div class="row mb-3">
+                        <div class="col-sm-4">
+                            <mat-form-field>
+                                <input matInput placeholder="Fist Name" />
+                            </mat-form-field>
+                        </div>
+                        <div class="col-sm-4">
+                            <mat-form-field>
+                                <input matInput placeholder="Middle Name" />
+                            </mat-form-field>
+                        </div>
+                        <div class="col-sm-4">
+                            <mat-form-field>
+                                <input matInput placeholder="Last Name" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-4 rtl">
+                            <mat-form-field>
+                                <input matInput placeholder="Arabic Fist Name" />
+                            </mat-form-field>
+                        </div>
+                        <div class="col-sm-4 rtl">
+                            <mat-form-field>
+                                <input matInput placeholder="Arabic Middle Name" />
+                            </mat-form-field>
+                        </div>
+                        <div class="col-sm-4 rtl">
+                            <mat-form-field>
+                                <input matInput placeholder="Arabic Last Name">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-6">
+                            <mat-form-field>
+                                <input matInput placeholder="Email Address">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-sm-6">
+                            <mat-form-field>
+                                <input matInput placeholder="Address">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-6">
+                            <ng-multiselect-dropdown
+                                    [placeholder]="'Select Country'"
+                                    [data]="CountryDropDownList"
+                                    [(ngModel)]="selectedCountry"
+                                    [settings]="CountryDropdownSettings"
+                                    name="country">
+                            </ng-multiselect-dropdown>
+                        </div>
+                        <div class="col-sm-2">
+                            <mat-form-field>
+                                <input matInput placeholder="Country Code">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-sm-4">
+                            <mat-form-field>
+                                <input matInput placeholder="Phone Number">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="col-sm-6">
+                            <ng-multiselect-dropdown
+                                    [placeholder]="'User Group'"
+                                    [data]="UserGroupDropdownList"
+                                    [(ngModel)]="selectedUserGroup"
+                                    [settings]="UserGroupDropdownSettings"
+                                    name="usergroup">
+                            </ng-multiselect-dropdown>
+                        </div>
+                        <div class="col-sm-6">
+                            <ng-multiselect-dropdown
+                                    [placeholder]="'Company'"
+                                    [data]="CompanyDropdownList"
+                                    [(ngModel)]="selectedCompany"
+                                    [settings]="CompanyDropdownSettings"
+                                    name="company">
+                            </ng-multiselect-dropdown>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="col-sm-6">
+                            <ng-multiselect-dropdown
+                                    [placeholder]="'State'"
+                                    [data]="UserGroupDropdownList"
+                                    [(ngModel)]="selectedUserGroup"
+                                    [settings]="UserGroupDropdownSettings"
+                                    name="usergroup">
+                            </ng-multiselect-dropdown>
+                        </div>
+                        <div class="col-sm-6">
+                            <ng-multiselect-dropdown
+                                    [placeholder]="'City'"
+                                    [data]="CompanyDropdownList"
+                                    [(ngModel)]="selectedCompany"
+                                    [settings]="CompanyDropdownSettings"
+                                    name="company">
+                            </ng-multiselect-dropdown>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-6">
+                            <mat-form-field>
+                                <input matInput placeholder="Postal/Zip Code">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-sm-6">
+                            <mat-form-field>
+                                <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+                                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <button type="button" class="btn btn-success">Save</button>
+                        <button type="button" class="btn btn-error">Cancel</button>
+                        <button type="button" class="btn btn-warning">Clear</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
